@@ -2,7 +2,7 @@
 
 angular
   .module('goopApp', [
-    'ngRoute'
+    'ngRoute', 'ngResource'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -45,6 +45,14 @@ angular
       .when('/docs', {
         templateUrl: 'views/docs.html',
         controller: 'DocsCtrl'
+      })
+      .when('/classes', {
+        templateUrl: 'views/classes/classes.html',
+        controller: 'ClassesListCtrl'
+      })
+      .when('/classes/:id', {
+        templateUrl: 'views/classes/class-detail.html',
+        controller: 'ClassDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'

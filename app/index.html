@@ -27,6 +27,7 @@
           <li ng-class="{ active: isActive('/')}"><a ng-href="#/">Home</a></li>
           <li ng-class="{ active: isActive('/new-project')}" ng-show="canAccess('/profile')"><a ng-href="#/new-project">New Project</a></li>
           <li ng-class="{ active: isActive('/projects')}" ng-show="canAccess('/profile')"><a ng-href="#/projects">Projects</a></li>
+          <li ng-class="{ active: isActive('/classes')}" ng-show="canAccess('/profile')"><a ng-href="#/classes">Classes</a></li>
           <li ng-class="{ active: isActive('/docs')}" ><a ng-href="#/docs">Docs</a></li>
           <li ng-class="{ active: isActive('/profile')}" ng-show="canAccess('/profile')"><a ng-href="#/profile">Profile</a></li>
           <li ng-class="{ active: isActive('/settings')}" ng-show="canAccess('/settings')"><a ng-href="#/settings">Settings</a></li>
@@ -55,6 +56,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -64,6 +66,8 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/authentication.js"></script>
         <script src="scripts/services/application.js"></script>
+        <script src="scripts/services/cachedClasses.js"></script>
+        <script src="scripts/services/resources/classResource.js"></script>
         <script src="scripts/controllers/loading.js"></script>
         <script src="scripts/services/routefilter.js"></script>
         <script src="scripts/controllers/profile.js"></script>
@@ -74,6 +78,8 @@
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/projects.js"></script>
         <script src="scripts/controllers/new-project.js"></script>
+        <script src="scripts/controllers/classes/classesListCtrl.js"></script>
+        <script src="scripts/controllers/classes/classDetailCtrl.js"></script>
         <!-- endbuild -->
 </body>
 </html>

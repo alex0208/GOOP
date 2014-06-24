@@ -1,0 +1,10 @@
+	<ul class="container">
+		<li class="jumbotron" ng-repeat="class in classes">
+			<div class="row session">
+				<h4 class="well-title">{{class.name}}</h4>
+				<span>{{class.author.name}}</span>
+				<p>{{class.description}}</p>
+			    <a href="#/classes/{{ class._id }}">See more</a>
+			</div>
+		</li>
+	</ul>
