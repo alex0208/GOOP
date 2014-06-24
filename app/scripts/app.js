@@ -26,6 +26,26 @@ angular
         templateUrl: 'views/signin.html',
         controller: 'SigninCtrl'
       })
+      .when('/signout', {
+        templateUrl: 'views/signout.html',
+        controller: 'SignoutCtrl'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
+      })
+      .when('/projects', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
+      })
+      .when('/new-project', {
+        templateUrl: 'views/new-project.html',
+        controller: 'NewProjectCtrl'
+      })
+      .when('/docs', {
+        templateUrl: 'views/docs.html',
+        controller: 'DocsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
