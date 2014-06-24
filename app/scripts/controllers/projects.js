@@ -8,10 +8,9 @@
  * Controller of the goopApp
  */
 angular.module('goopApp')
-  .controller('ProjectsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ProjectsCtrl', function ($scope, $http) {
+  	$http.get('api/projects.json').success(function(data) {
+  		$scope.projects = data;
+  		console.log(data);
+  	});
   });

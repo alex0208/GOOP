@@ -1,1 +1,11 @@
-<p>This is the projects view.</p>
+	<ul class="controiner">
+		<li class="jumbotron" ng-repeat="project in projects">
+			<div class="row session">
+				<h4 class="well-title">{{project.name}}</h4>
+				<span>{{project.date | date}}</span>
+				<p>{{project.description}}</p>
+			    <button class="btn btn-lg btn-primary " type="submit">Open</button>
+
+			</div>
+		</li>
+	</ul>

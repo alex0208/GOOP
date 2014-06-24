@@ -25,9 +25,11 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li ng-class="{ active: isActive('/')}"><a ng-href="#/">Home</a></li>
+          <li ng-class="{ active: isActive('/new-project')}" ng-show="canAccess('/profile')"><a ng-href="#/new-project">New Project</a></li>
+          <li ng-class="{ active: isActive('/projects')}" ng-show="canAccess('/profile')"><a ng-href="#/projects">Projects</a></li>
+          <li ng-class="{ active: isActive('/docs')}" ><a ng-href="#/docs">Docs</a></li>
           <li ng-class="{ active: isActive('/profile')}" ng-show="canAccess('/profile')"><a ng-href="#/profile">Profile</a></li>
           <li ng-class="{ active: isActive('/settings')}" ng-show="canAccess('/settings')"><a ng-href="#/settings">Settings</a></li>
-          <li ng-class="{ active: isActive('/docs')}" ><a ng-href="#/docs">Docs</a></li>
           <li ng-class="{ active: isActive('/signin')}" ng-show="canAccess('/signin')"><a ng-href="#/signin">Signin</a></li>
           <li ng-class="{ active: isActive('/signup')}" ng-show="canAccess('/signin')"><a ng-href="#/signup">Sign up</a></li>
           <li ng-class="{ active: isActive('/signout')}" ng-show="!canAccess('/signin')"><a ng-href="#/signout">Sign out</a></li>
